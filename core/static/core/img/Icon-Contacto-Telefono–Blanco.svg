@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="147" height="110" viewBox="0 0 147 110">
+  <defs>
+    <clipPath id="clip-AppCenter-Web-Icon-Contacto-Telefono_Blanco">
+      <rect width="147" height="110"/>
+    </clipPath>
+  </defs>
+  <g id="AppCenter-Web-Icon-Contacto-Telefono_Blanco" data-name="AppCenter-Web-Icon-Contacto-Telefono–Blanco" clip-path="url(#clip-AppCenter-Web-Icon-Contacto-Telefono_Blanco)">
+    <g id="_684812" data-name="684812" transform="translate(24 5)">
+      <g id="Grupo_10252" data-name="Grupo 10252" transform="translate(0 0)">
+        <path id="Trazado_6790" data-name="Trazado 6790" d="M97.16,73.548l-12.4-12.4a8.776,8.776,0,0,0-12.4,0l-5.635,5.635a6.649,6.649,0,0,1-9.39,0L32.92,42.343a6.637,6.637,0,0,1,0-9.391l5.635-5.635a8.76,8.76,0,0,0,0-12.4L26.158,2.564a8.773,8.773,0,0,0-12.387-.009L9.254,7.033a31.644,31.644,0,0,0,0,44.7l38.7,38.717a31.591,31.591,0,0,0,44.7,0l4.508-4.508A8.775,8.775,0,0,0,97.16,73.548ZM17.894,6.7a2.926,2.926,0,0,1,4.135,0L34.422,19.053a2.92,2.92,0,0,1,0,4.132l-2.066,2.066L15.838,8.734ZM52.083,86.32,13.386,47.6a25.688,25.688,0,0,1-1.612-34.668L28.244,29.4a12.472,12.472,0,0,0,.543,17.071L53.209,70.917h0a12.471,12.471,0,0,0,17.072.544l16.47,16.47A25.639,25.639,0,0,1,52.083,86.32Zm40.945-4.508-2.066,2.066L74.434,67.349,76.5,65.283a2.925,2.925,0,0,1,4.132,0l12.4,12.4A2.925,2.925,0,0,1,93.028,81.812Z" transform="translate(-0.011 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

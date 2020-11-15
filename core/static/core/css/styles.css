@@ -1,0 +1,443 @@
+.header_per{
+    background-color: transparent;
+    color: darkblue;
+    padding: 20px;
+}
+
+.mobile-nav-toggle i {
+    color: #197EE6;
+}
+
+/* ____________________________________________________________________________________
+--------------------------------------- HOME  -----------------------------------*/
+
+
+
+/*________________________________________________________________________________________
+--------------------------------------- QUIEN SOMOS & PREGUNTAS  ---------------------- */
+
+
+
+.bold{
+    font-weight: bold;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-blue{
+    color: #19376c;
+}
+
+.text-grey{
+    color: #9b9b9b;
+}
+
+.text-black{
+    color: black;
+}
+
+.font-18{
+    font-size: 18px;
+}
+
+.mt-3{
+    margin-top: 30px;
+}
+
+.mt-7{
+    margin-top: 70px;
+}
+
+#quiensomos{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card-qs{
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 5px rgba(113, 126, 195, .25);
+    transition: all 0.3s;
+}
+
+#quiensomos h1::after,
+#faq-asesoria h1::after{
+    content: ' ';
+    width: 80px;
+    height: 5px;
+    background-color: #19376c;
+    display: block;
+    margin-left: 45%;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+a{
+    color: #19376c;
+}
+
+a:hover{
+    transform: scale(1.1);
+}
+
+.text-responsive{
+    text-align: left;
+}
+
+.card-qs .card-header{
+    border-radius: 25px 25px 0px 0px;
+    background-color: #aaadbe;
+    padding: 15px 0px;
+}
+
+.card-qs i{
+    padding-right: 5px;
+}
+.card-qs:hover{
+    transform: scale(1.1);
+}
+
+.img-card-qs{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+#faq-asesoria{
+    background-image: url('../img/AppCenter-Web-Section-Divisor.svg');
+    background-size: cover;
+    background-position: top;
+    padding-top: 180px;
+    padding-bottom: 250px;
+}
+
+.card-faq{
+    margin-bottom: 0px;
+    border: 1px solid #19376c !important;
+    border-bottom: none;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+.card-faq .card-header{
+    padding: 0px ;
+    border-bottom:  1px solid #19376c;
+    background-color:transparent;
+}
+
+.icon-faq-asesoria{
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    height: 25px;
+}
+
+#header {
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 22px 0;
+}
+
+.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    background: #fff;
+   
+  }
+
+#footer{
+    background-color: #113064;
+    padding: 35px 10px;
+}
+
+#footer ul li {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    list-style-type: none;
+    color: #FFF;
+}
+
+#footer ul li a{
+    color: #FFF;
+}
+
+#footer ul li a:hover{
+    transition: ease 0.2s;
+    color: #FFF;
+    padding-left: 20px;
+    text-decoration: solid;
+    
+}
+
+.icon-footer-list{
+    height: 17px;
+    padding-right: 15px;
+}
+
+.icon-home-contact{
+    height: 25px;
+    margin-right: 10px;
+}
+
+.icon-social{
+    margin-right: 20px;
+    background-color: beige;
+    border-radius: 30px;
+    padding: 11px 13px;
+}
+
+@media (max-width: 768px){
+    .icon-faq-asesoria{
+        position: initial;
+        margin-bottom: 10px;
+    }
+
+    .text-responsive{
+        text-align: center;
+    }
+}
+
+#reloj-section{
+    background: linear-gradient(to bottom, #19376c 0%, #ffffff 100%);
+    padding: 15px;
+    margin-bottom: 45px;
+}
+
+.icon-flag{
+    width: 60px;
+    transform: rotate(15deg);
+    box-shadow: 6px 5px 12px 0px black;
+    margin-left: 30%;
+    margin-top: -55px;
+}
+
+.btn-convertir{
+    background-color: #19376c;
+    border-radius: 15px;
+    border: none;
+    padding: 6px 20px;
+    color: #FFF;
+}
+
+@keyframes right-left {
+    0% {
+      transform: translateX(25px);
+    }
+    100% {
+      transform: translateX(-25);
+    }
+}
+
+.animated-rl {
+    animation: right-left 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+    0% {
+      transform: translateY(8px);
+    }
+    100% {
+      transform: translateY(-8px);
+    }
+}
+
+.animated-float {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+/* ____________________________________________________________________________________
+--------------------------------------- TURISMO  -----------------------------------*/
+.galeria {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.galeria li {
+    margin: 5px;
+
+}
+.galeria img {
+    width: 150px;
+    height: 100px;
+} 
+
+
+
+/*ESTILOS DE GALERIA TURISMO*/
+
+.modal {
+     display: none;
+}
+.modal:target {
+    display: inline-block;
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.imagen {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imagen img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 20px solid #fff;
+    box-sizing: border-box;
+}
+.imagen a{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.cerrar{
+    display: block;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    margin: 10px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+}
+
+/* ____________________________________________________________________________________
+--------------------------------------- TRAMITES  -----------------------------------*/
+
+.header_per{
+    background-color: transparent;
+    color: darkblue;
+    padding: 20px;
+}
+
+.navbar_per{
+    color: cornflowerblue;
+
+}
+.footer_per{
+    background-color:#a5aac0;
+}
+
+.color_cards {
+
+    
+    color: dimgray;
+    text-align: center;
+    padding: 20px;
+}
+
+.color_titulos_cards {
+
+    color: cornflowerblue;
+    text-align: center;
+    font-size: 40px;
+
+}
+ .col_border
+ {
+    border-style: double;
+ }
+
+ .bold{
+    font-weight: bold;
+}
+
+.text-blue{
+    color: #19376c;
+}
+
+.text-tit {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold ;
+}
+
+.text-card {
+    color: #9b9b9b;
+    text-align: left
+
+}
+
+.text-card2 {
+    color: #9b9b9b;
+    text-align: center
+
+}
+
+.img-card-qs{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+.ima-card {
+    padding: 0;
+    margin: o;
+    box-sizing: border-box;
+}
+
+/* ____________________________________________________________________________________
+---------------------------------------  CONTACTO  -----------------------------------*/
+
+.card-cto{
+    border-width: 3px;
+    border-color: rgba(100, 148, 237, 0.548);
+    background-color: transparent;
+}
+.btn-enviar{
+    background-color: #007CFF;
+    color: whitesmoke;
+    margin-right: 10px;
+    padding: 0 18px;
+}
+.btn-enviar:hover{
+    transform: scale(1.1);
+}
+.btn-limpiar{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+.btn-limpiar:hover{
+    transform: scale(1.1);
+}
+.resaltar:hover{
+    transform: scale(1.1);
+}
+form .error{
+    color: red;
+    padding: 2px;
+}
+.obligatorio{
+    color: red;
+    font-size: 10px;
+}

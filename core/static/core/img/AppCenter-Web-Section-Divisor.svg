@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1312" height="697" viewBox="0 0 1312 697">
+  <defs>
+    <clipPath id="clip-AppCenter-Web-Section-Divisor">
+      <rect width="1312" height="697"/>
+    </clipPath>
+  </defs>
+  <g id="AppCenter-Web-Section-Divisor" clip-path="url(#clip-AppCenter-Web-Section-Divisor)">
+    <path id="Trazado_9503" data-name="Trazado 9503" d="M6161.664-651.068c-82.445,9.255-148.719,26.024-176.551,41.652-108.474,60.913-497.042,101.5-727.971,19.354-162.039-57.641-294.343-74.09-407.912-62.3L4855.58,8.554C4911-.3,4965.119-13.495,5016-31.822c96.853-34.886,240.483-128.986,623.992-12.329,187.635,57.076,374.773,38.917,521.672,0Z" transform="translate(-4849.664 671.956)" fill="#190f0b" opacity="0.03"/>
+  </g>
+</svg>
