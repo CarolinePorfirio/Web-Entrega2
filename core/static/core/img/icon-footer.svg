@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="73" viewBox="0 0 41 73">
+  <defs>
+    <clipPath id="clip-AppCenter-Web-Icon-Go">
+      <rect width="41" height="73"/>
+    </clipPath>
+  </defs>
+  <g id="AppCenter-Web-Icon-Go" clip-path="url(#clip-AppCenter-Web-Icon-Go)">
+    <g id="_709586" data-name="709586" transform="translate(-111.954 8.647)">
+      <g id="Grupo_7944" data-name="Grupo 7944" transform="translate(117.742 0)">
+        <path id="Trazado_4630" data-name="Trazado 4630" d="M147.443,26.549,121.458.635a2.178,2.178,0,1,0-3.075,3.084L142.821,28.09,118.382,52.461a2.178,2.178,0,0,0,3.076,3.083l25.985-25.913a2.177,2.177,0,0,0,0-3.083Z" transform="translate(-117.742 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
