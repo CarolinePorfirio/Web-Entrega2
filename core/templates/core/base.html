@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio Welcome Chile, primera entrega">
+    <meta name="author" content="Grupo Nelson C. Sebastian D. Caroline P. Viviana S. Rafael R.">
+    <meta name="keywords" content="html, turismo, extranjeros,chile">
+
+    <title> {% block title %} {% endblock%} | Welcome Chile </title>
+
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    
+    <!-- CSS Propios -->
+    <link rel="icon" href="{% static 'core/img/icons.png' %}" type="images/png">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+
+    <title>INDEX</title>
+</head>
+<body>
+    <header id ="header" class="header_per">
+        <a href="accounts/login" style="margin-left:30px">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+            <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+            <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+            </svg>
+            Backoffice
+        </a>
+        <div class="container d-flex">
+            <a class="navbar-brand mr-auto" href="">
+                <img src="{% static 'core/img/logo.png' %}" alt="" width="90px" height="70px">
+            </a>
+              <!-- Inicio Sección NAVBAR -->
+            <nav class="navbar navbar-expand-md flex-column flex-md-row">
+                <!-- Logotipo empresa -->
+            
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"  ></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'quiensomos' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-diagram-3-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
+                                </svg>
+                                Quienes Somos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'turismo' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-signpost-2-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 1.414V16h2V1.414a1 1 0 0 0-2 0z"/>
+                                    <path d="M1 3a1 1 0 0 1 1-1h11.5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.3 5.6a1 1 0 0 1-.8.4H2a1 1 0 0 1-1-1V3zm14 5a1 1 0 0 0-1-1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H14a1 1 0 0 0 1-1V8z"/>
+                                </svg>
+                                Turismo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'tramites' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zm1.354 4.354a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                </svg>
+                                Tramites
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'preguntas' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
+                                </svg>
+                                Preguntas Frecuentes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contacto' %}">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-open-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.313l6.709 3.933L8 8.928l1.291.717L16 5.715V5.4a2 2 0 0 0-1.059-1.765l-6-3.2zM16 6.873l-5.693 3.337L16 13.372v-6.5zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516zM0 13.373l5.693-3.163L0 6.873v6.5z"/>
+                                </svg>
+                                Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownNavbar" data-toggle="dropdown">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-menu-button-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M14 7H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM2 6a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H2z"/>
+                                    <path fill-rule="evenodd" d="M15 11H1v-1h14v1zM2 12.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0h-8zm5.927 2.427l.396.396a.25.25 0 0 0 .354 0l.396-.396A.25.25 0 0 0 8.396 2h-.792a.25.25 0 0 0-.177.427z"/>
+                                </svg>
+                                Sitios Relacionados
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-blue" target="_blank" href="https://www.extranjeria.gob.cl/">Extranjeria</a>
+                                <a class="dropdown-item text-blue" target="_blank" href="https://www.pdichile.cl/instituci%C3%B3n/unidades/migraciones">PDI</a>
+                                <a class="dropdown-item text-blue" target="_blank" href="https://www.registrocivil.cl/">Registro Civil </a>
+                                <a class="dropdown-item text-blue" target="_blank" href="https://www.sernatur.cl/">Senatur</a>
+                            </div>
+                        </li>
+                         
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Fin Sección NAVBAR -->
+    <section id="reloj-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div  class="text-white font-18 bold mt-2 text-left" id="reloj" ></div> 
+                </div>
+                <div class="col md-6">
+                    <div class="accordion" id="accordionFaq">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                              <div class="card card-faq">
+                                <div class="card-header" id="pregunta2">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      <p class="text-white font-18 bold mt-2">Cambio de Divisas </p>
+                                      <i class="fas fa-dollar-sign fa-2x icon-faq-asesoria animated-float" aria-hidden="true" style="color: #19376c;"></i>
+                                    </button>
+                                  </h5>
+                                </div>
+        
+                                <div id="collapseTwo" class="collapse " aria-labelledby="pregunta2" data-parent="#accordionFaq">
+                                  <div class="card-body">
+                                    <form >
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <label for="divisa" class="bold text-blue">Seleccione Divisa:</label>
+                                                <div class="col">
+                                                    <input type="radio" id="DOLAR" name="divisa" value="DOLAR" class="resaltar">
+                                                    <label for="DOLAR" class="bold text-white btn-link">DOLAR  :</label>
+                                                    <label id="valord"  name="valord" class="bold text-blue "></label><br>
+                                                    <input type="radio" id="EURO" name="divisa" value="EURO" class="resaltar">
+                                                    <label for="EURO" class="bold text-white btn-link">EURO   :</label>
+                                                    <label id="valore" name="valore" class="bold text-blue "></label><br>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="monto" class="bold text-blue">Monto Convertir:</label>
+                                                <input type="monto" id="monto" name="monto" placeholder="$ 000.00" class="form-control">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="resultado" class="bold text-blue">Resultado Pesos CL:</label>
+                                                <label for="resultado" id="resultado" name="resultado" class="bold text-blue"></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <button type="button" class="btn btn-convertir" onclick="CambioDivisa()">Convertir</button>
+                                        </div>
+									</form>
+                                </div>
+							</div>
+						</div>
+					</div>
+		    </div>
+        </div>
+    </section>
+        <section id="contenido">
+        <div class="container">    
+            {% block Carrucel %} {% endblock %}
+        </div>
+
+        <div class="container">
+            <h1 class="text-center text-blue mt-7"> {% block subtitle %} {% endblock %}  </h1> 
+            <p class="text-center text-grey font-18 mt-2">
+                {% block parrafo %} {% endblock %}
+            </p>
+        </div>
+    </section>
+    </header>
+    <!-- fin del header-->
+
+    <!-- Contenido Principal-->
+<section id="contenido">
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+</section>
+<br>
+<br>
+    <!-- Inicio FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row mt-9 ">
+                <div class="col-lg-4 col-md-12 text-center animated-float">
+                    <img src="{% static 'core/img/logo-blanco.png' %}" alt="" height="150px" class="mt-4">
+                    <p class="text-white text-center bold mt-4"> ¡Su sitio de informaciones para quien ama a Chile!
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 justify-content-center text-center">
+                    <h6 class="text-white font-20 bold mt-4">Menú</h6>
+                    <ul class="mt-5">
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a href="{% url 'quiensomos' %}">Quien Somos </a>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a href="{% url 'turismo' %}">Turismo</a>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a href="{% url 'tramites' %}">Tramites </a>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a href="{% url 'preguntas' %}">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 menu-top-resp text-center plr-2 pd-tablet justify-content-center">
+                    <h6 class="text-white font-20 bold mt-4">Sitios de Interés</h6>
+                    <ul class="mt-5">
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a target="_blank" href="https://www.extranjeria.gob.cl/">Extranjeria Chile </a>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                            <a target="_blank" href="https://www.pdichile.cl/instituci%C3%B3n/unidades/migraciones">PDI Chile </a>
+                        </li>
+                        <li>
+                          <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                          <a target="_blank" href="https://www.registrocivil.cl/">Registro Civil</a>
+                      </li>
+                      <li>
+                          <img src="{% static 'core/img/icon-footer.svg' %}" class="icon-footer-list">
+                          <a target="_blank" href="https://www.sernatur.cl/">Senatur </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 mt-8 plr-2 ">
+                    <h6 class="text-white font-20 bold mt-4">
+                        <a href="{% url 'contacto' %}" class="text-white font-20">Contacto</a></h6>
+                    <div class="row justify-tablet mt-5">
+                        <img src="{% static 'core/img/Icon-Contacto-Email–Blanco.svg' %}" alt="" class="icon-home-contact">
+                        <p class="text-white font-15 lighter">contacto@welcome_chile.cl</p>
+                    </div>
+                    <div class="row justify-tablet ">
+                        <img src="{% static 'core/img/Icon-Contacto-Telefono–Blanco.svg' %}" alt="" class="icon-home-contact">
+                        <p class="text-white font-15 lighter">+56 9 8765-4321</p>
+                    </div>
+                    <div class="row mt-8 justify-content-center">
+                        <a href=""><i class="fab fa-facebook-f  icon-social"></i> </a>
+                        <a href=""><i class="fab fa-linkedin-in  icon-social"></i></a>
+                        <a href=""><i class="fab fa-instagram icon-social"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="background-color: #FFF;">
+            <div class="row mt-4 d-flex align-items-center">
+              <div class="col-lg-12 text-center ">
+                <div class="copyright text-whit lighter font-15 text-white">
+                  Todos los derechos reservados. WelcomeChile v1.2&copy;  2020 Santiago de Chile.
+                </div>
+                <div class="text-whit lighter font-15 text-white">
+                  Diseñado y Desarrolado con  <i class="fas fa-heart"></i>  por nuestro equipo.
+                </div>
+              </div>
+              
+            </div>
+            
+
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- JS Propios -->
+    <script src="{% static 'core/js/main.js' %}"></script>
+    <script src="{% static 'core/js/validaFormulario.js' %}"></script>
+    <script src="{% static 'core/js/fun_propias.js' %}"></script>
+    <script src="{% static 'core/js/jquery.validate.js' %}"></script>
+    
+
+</body>
+</html>

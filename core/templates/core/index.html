@@ -1,0 +1,117 @@
+{% extends 'core/base.html' %}
+{% block title %} Welcome Chile{% endblock%}
+
+{% block Carrucel %}
+    {% load static %}
+    <!-- CAROUSEL -->
+        <div class="row justify-content-center mt-1 mb-4">
+           <div class="carousel slide" data-ride="carousel" id="carousel">
+               <!-- Indicadores -->
+               <ul class="carousel-indicators">
+                   <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                   <li data-target="#carousel" data-slide-to="1"></li>
+                   <li data-target="#carousel" data-slide-to="2"></li>
+                   <li data-target="#carousel" data-slide-to="3"></li>
+                   <li data-target="#carousel" data-slide-to="4"></li>
+               </ul>
+
+               <!-- Slideshow -->
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img class="img-fluid" src="{% static 'core/img/bandera.jpg' %}" alt="Inicio" >                            
+                   </div>
+                   <div class="carousel-item">
+                       <img class="img-fluid" src="{% static 'core/img/turismo.jpg' %}" alt="Turismo">
+                   </div>
+                   <div class="carousel-item">
+                       <img class="img-fluid" src="{% static 'core/img/visado.jpg' %}" alt="Tramites">
+                   </div>
+                   <div class="carousel-item">
+                       <img class="img-fluid" src="{% static 'core/img/preguntas_frecuentes.jpg' %}" alt="Preguntas Frecuentes">                            
+                   </div>
+                   <div class="carousel-item">
+                       <img class="img-fluid" src="{% static 'core/img/contacto.jpg' %}" alt="Contacto">                            
+                   </div>
+               </div>
+
+               <!-- Controles -->
+               <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                   <span class="carousel-control-prev-icon"></span>
+               </a>
+               <a class="carousel-control-next" href="#carousel" data-slide="next">
+                   <span class="carousel-control-next-icon"></span>
+               </a>
+           </div>
+       </div>
+       <!-- FIN CAROUSEL -->
+
+ {% endblock %}
+
+
+{% block subtitle %} Bienvenido al Portal para el Extranjero en Chile{% endblock %}
+
+{% block parrafo %}En este sitio podrá encontrar lo necesario para disfrutar 
+y tener una experiencia inolvidable de nuestro país. Así como también podrá 
+encontrar la información necesaria y pertinente para realizar tus tramites 
+de migración de modo de poder establecer su residencia en nuestro país.{% endblock %}
+
+ {% block content %} 
+    {% load static %}
+    <div  class="row mt-4 mb-4  justify-content-center text-center">
+               <h4 class="display-4 bold text-blue text-tit"> Con Nosotros Podras Encontrar....</h4>
+                <br> 
+                <br>
+                <br>
+               <div class="card-deck">
+                   <div class="card">
+                        <img class="card-img-top" src="{% static 'core/img/index/turismo.jpg' %}" alt="Imagen">
+                        <div class="card-title text-blue bold">
+                            <h2 id="requituri" style="text-align: center;"> Turismo </h2>
+                        </div>  
+                       <div class="card-body">
+                        
+                           <p class="text-card2">
+                                 Nuestro país cuanta con una gran diversidad de paisajes y destinos turísticos desde norte a sur cada región ofrecerá una experiencia inolvidable para el turista.
+                               <br>
+                               Ven a disfrutar...
+                           </p>
+                       </div>
+                       <div class="card-footer">
+                            <a class="btn btn-secondary" href="{% url 'turismo' %}">Ver detalles</a>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <img class="card-img-top" src="{% static 'core/img/index/tramites.jpg' %}" alt="Imagen">
+                        <div class="card-title text-blue bold">
+                            <h2 id="requituri" style="text-align: center;"> Tramites </h2>
+                        </div>
+                       <div class="card-body">
+                           <p class="text-card2">
+                            Variados son los trámites necesarios para poder visitar nuestro país así como también para quienes decidan establecer su resistencia acá.
+                               <br>
+                               Te indicamos los principales tramites que debes realizar...
+                           </p>
+                       </div>
+                       <div class="card-footer">
+                            <a class="btn btn-secondary" href="{% url 'tramites' %}">Ver detalles</a>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <img class="card-img-top" src="{% static 'core/img/index/preguntasFrecuentes.jpg' %}" alt="Imagen">
+                       <div class="card-title text-blue bold">
+                        <h2 id="requituri" style="text-align: center;"> Preguntas Frecuentes </h2>
+                    </div>  
+                       <div class="card-body">
+                           <p class="text-card2">
+                            Entre todos tenemos muchas cosas en común, incluso las dudas son una de ellas, 
+                            por eso hemos preparado una sección de Preguntas más Frecuentes donde podrás encontrar sus respuestas.
+
+                          </p>
+                       </div>
+                       <div class="card-footer">
+                           <a class="btn btn-secondary" href="{% url 'preguntas' %}">Ver detalles</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+ {% endblock %}

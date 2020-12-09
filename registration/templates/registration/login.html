@@ -1,0 +1,60 @@
+<head>
+    <title>Iniciar sesión | Sitio de administración de Django</title>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+</head>
+<body class=" login">
+<div id="container">
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+			<h1 id="site-name"><a href="/admin/">Administración Welcome Chile</a></h1>
+        </div>
+    </div>
+    <!-- END Header -->
+ <!-- Content -->
+    <div id="content" class="colM">
+        <div id="content-main">
+
+        {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+        {% if next %}
+            {% if user.is_authenticated %}
+            <p>Your account doesn't have access to this page. To proceed,
+            please login with an account that has access.</p>
+            {% else %}
+            <p>Please login to see this page.</p>
+            {% endif %}
+        {% endif %}
+
+
+            <form method="post" action="{% url 'login' %}" id="login-form" >
+        {% csrf_token %}
+
+            <div class="form-row">
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+            </div>
+            <div class="form-row">
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+            </div>
+
+            <div class="submit-row">
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+            </form>
+
+            {# Assumes you setup the password_reset view in your URLconf #}
+            <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+        </div>
+        <br class="clear">
+    </div>
+</div>
+</body>

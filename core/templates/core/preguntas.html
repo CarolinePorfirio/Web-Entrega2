@@ -1,0 +1,152 @@
+{% extends 'core/base.html' %}
+{% block title %} Preguntas{% endblock%}
+
+{% block Carrucel %} {% endblock %}
+
+{% block subtitle %} Preguntas Frecuentes{% endblock %}
+
+{% block parrafo %} Si tiene alguna duda a respecto de los procesos de Visación o quiere saber más sobre Chile puedes
+consultar las preguntas frecuentas que tenemos acá.<br>
+Si aún tiene dudas, puede ir a nuestra sección <a href="{% url 'contacto' %}">Contacto</a> y enviar su pregunta a nosotros {% endblock %}
+
+ {% block content %} 
+    {% load static %}
+    <div class="accordion" id="accordionFaq">
+        <div class="row justify-content-center mt-7">
+            <div class="col-md-8">
+
+                <div class="card card-faq">
+                <div class="card-header" id="pregunta2">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <p class="text-blue mt-2">¿Qué es la Residencia Temporal y cuales son los Tipos?</p>
+                        <img src="{% static 'core/img/AppCenter-Web-Icon-Go–5.svg' %}" alt="" class="icon-faq-asesoria">
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="collapseTwo" class="collapse " aria-labelledby="pregunta2" data-parent="#accordionFaq">
+                    <div class="card-body">
+                        <p class="text-grey font-15 plr-2">
+                        Es una autorización temporal (por un período determinado) para residir y desarrollar las actividades que expresamente permite la ley. 
+                        <br>
+                        <br>
+                        Los Tipos de Residencia Temporal son: <br>
+                        <b>Visa Sujeta a Contrato: </b> Habilita para residir y para trabajar en forma exclusiva con el empleador que suscribe el contrato. Tiene una duración de 
+                        hasta dos años y puede prorrogarse indefinidamente, aunque tras permanecer durante dos años continuos con esta 
+                        residencia se puede solicitar la Permanencia Definitiva. El término del contrato de trabajo da término inmediato a 
+                        la visa. <br>
+                        <b>Visa Temporaria:</b> Habilita para residir y realizar cualquier actividad lícita. Tiene una duración de hasta un año, y es prorrogable 
+                        sólo por un año más, período tras el cual debe solicitar la Permanencia Definitiva o hacer abandono del país. <br>
+                        <b>Visa de Estudiante:</b> Habilita a estudiar en establecimientos de enseñanza reconocidos por el Estado. Tiene una duración de hasta un año, o hasta la duración de 
+                        la beca para quienes cuentan con una. Es prorrogable hasta el término de los estudios, y luego permite postular a la Permanencia Definitiva. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header" id="pregunta1">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <p class="text-blue text-left font-17 mt-2">¿Qué es la Permanencia Definitiva y Qué condiciones debo cumplir <br> para optar a esta Visa? </p>
+                        <img src="{% static 'core/img/AppCenter-Web-Icon-Go–5.svg' %}" alt="" class="icon-faq-asesoria">
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="pregunta1" data-parent="#accordionFaq">
+                    <div class="card-body">
+                        <p class="text-grey font-15 plr-2">
+                        Es el permiso para radicarse indefinidamente en el país y desarrollar cualquier actividad, sin más limitaciones que 
+                        los que imponen las leyes vigentes. <br> <br>
+                        Además de no haber permanecido más de 180 días fuera del país durante el período de Visa, deberá cumplir con alguno de estos puntos: <br>
+                        Contar con al menos dos años (consecutivos) de Visa Sujeta a Contrato. <br>
+                        Contar al menos con un año de Visa Temporaria. <br>
+                        Contar al menos con dos años de Visa Estudiante (siempre y cuando haya dado término a estudios secundarios o profesionales). <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-faq">
+                <div class="card-header" id="pregunta3">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <p class="text-blue text-left font-17 mt-2">Al momento de solicitar un Permiso de Residencia, ¿automáticamente <br> quedo habilitado para trabajar?</p>
+                        <img src="{% static 'core/img/AppCenter-Web-Icon-Go–5.svg' %}" alt="" class="icon-faq-asesoria">
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="collapseThree" class="collapse " aria-labelledby="pregunta3" data-parent="#accordionFaq">
+                    <div class="card-body">
+                        <p class="text-grey font-15 plr-2">
+                        Si usted desea trabajar mientras su Visa Temporaria o Sujeta a Contrato está en trámite, deberá solicitar un permiso especial de trabajo para solicitantes de Visa de Residencia. El costo es el 50% de la Visa Sujeta a Contrato según la nacionalidad que corresponda.
+                        <br>
+                        <br>
+                        La Visa de Residencia:
+                        <br>
+                        Sólo habilita a trabajar una vez que se encuentra estampada en el pasaporte. <br>
+                        Sólo habilita a trabajar a los titulares de las visas, pero no a los dependientes. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header" id="pregunta4">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <p class="text-blue font-17 mt-2">¿Qué derechos tengo como trabajador extranjero en Chile?</p>
+                        <img src="{% static 'core/img/AppCenter-Web-Icon-Go–5.svg' %}" alt="" class="icon-faq-asesoria">
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse " aria-labelledby="pregunta4" data-parent="#accordionFaq">
+                    <div class="card-body">
+                        <p class="text-grey font-15 plr-2">
+                        Como regla general, tiene los mismos derechos que cualquier trabajador chileno, salvo excepciones muy puntuales ordenadas por ley, como 
+                        limitaciones para trabajar en la administración pública o el cumplimiento del límite de 15% de trabajadores 
+                        extranjeros en las empresas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-faq">
+                <div class="card-header" id="pregunta5">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <p class="text-blue font-17 mt-2">¿Qué tipo de infracciones migratorias se pueden cometer?</p>
+                        <img src="{% static 'core/img/AppCenter-Web-Icon-Go–5.svg' %}" alt="" class="icon-faq-asesoria">
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFive" class="collapse " aria-labelledby="pregunta5" data-parent="#accordionFaq">
+                    <div class="card-body">
+                        <p class="text-grey font-15 plr-2">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i> Permanecer en Chile con el Permiso de Turismo o de residencia vencido.<br>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i> Trabajar sin contar con permiso para ello. Se sanciona tanto al extranjero como al empleador que otorga el trabajo. <br>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i> No registrar o no obtener Cédula de Identidad dentro de 30 días desde otorgada la Residencia o la Permanencia Definitiva. <br>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i> No informar cambio de domicilio en Policía Internacional. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
