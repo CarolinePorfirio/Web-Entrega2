@@ -2,7 +2,7 @@ from django.db import models
 
 class Contact(models.Model):
     run = models.CharField(max_length = 100, verbose_name = "RUT")
-    passport = models.CharField(max_length = 100, verbose_name = "PASAPORTE")
+    passport = models.CharField(max_length = 100, verbose_name = "PASAPORTE",blank=True)
     name = models.CharField(max_length = 100, verbose_name = "NOMBRE")
     lastname = models.CharField(max_length = 100, verbose_name = "APELLIDO")
     email = models.CharField(max_length = 100, verbose_name = "EMAIL")
@@ -22,3 +22,5 @@ class Contact(models.Model):
         verbose_name_plural = "Contactos"
         ordering = ['-updated','-created']
     
+    def __str__ (self):
+        return self.run

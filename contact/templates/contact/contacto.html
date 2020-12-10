@@ -24,25 +24,29 @@
                             <p class="text-danger"><strong>Problemas al registrar el formulario</strong></p>
                         {% endif %}
                         <!-- Formulario -->
-                        <form action="" method="POST">
+                        <form method="POST" action="" >
                             {% csrf_token %}
                              <div class="form-group row">
                                 <div class="col-sm-6">
                                     <label for="rut" class="bold text-blue">* Rut:</label>
+                                    <br>
                                     {{form.run}}
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="pasaporte" class="bold text-blue">* Pasaporte:</label>
+                                    <br>
                                     {{form.passport}}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
                                     <label for="nombre" class="bold text-blue">* Nombre:</label>
+                                    <br>
                                     {{form.name}}
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="apellido" class="bold text-blue">* Apellido:</label>
+                                    <br>
                                      {{form.lastname}}
                                 </div>
                             </div>
@@ -53,12 +57,14 @@
                                             <div class="form-group row">
                                                 <div class="col">
                                                     <label for="email" class="bold text-blue">* Email:</label>
+                                                    <br>
                                                     {{form.email}}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col">
                                                     <label for="confirmar_email" class="bold text-blue">* Confirmar Email:</label>
+                                                    <br>
                                                     {{form.confirm_email}}
                                                 </div>
                                             </div>
@@ -67,12 +73,14 @@
                                             <div class="form-group row">
                                                 <div class="col">
                                                     <label for="password" class="bold text-blue">* Password:</label>
+                                                    <br>
                                                     {{form.password}}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col">
                                                     <label for="password_confirm" class="bold text-blue">* Confirme Password:</label>
+                                                    <br>
                                                     {{form.confirm_password}}
                                                 </div>
                                             </div>
