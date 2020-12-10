@@ -131,3 +131,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/admin/'
+
+
+#
+# Email Config
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '30682123eac08b'
+EMAIL_HOST_PASSWORD = 'c1446d5408d48a'
+EMAIL_PORT = '2525'
