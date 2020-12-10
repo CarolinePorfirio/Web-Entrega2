@@ -23,6 +23,12 @@
                         {% if 'FAIL' in request.GET %}
                             <p class="text-danger"><strong>Problemas al registrar el formulario</strong></p>
                         {% endif %}
+                        {% if 'MAIL' in request.GET %}
+                            <p class="text-danger"><strong>Problemas al registrar el formulario, CORREO no coinciden</strong></p>
+                        {% endif %}
+                        {% if 'PASS' in request.GET %}
+                            <p class="text-danger"><strong>Problemas al registrar el formulario, CLAVES no coinciden</strong></p>
+                        {% endif %}
                         <!-- Formulario -->
                         <form method="POST" action="" >
                             {% csrf_token %}

@@ -10,6 +10,18 @@ def contacto(request):
     
     if request.method == "POST":
         contact_form = ContactForm(data = request.POST)
+        name = request.POST.get('name','')
+        email =request.POST.get('email','')
+        emailc =request.POST.get('confirm_email','')
+        message= request.POST.get('message','')
+        password=request.POST.get('password','')
+        passwordc=request.POST.get('confirm_password','')
+        if email != emailc:
+            return redirect(reverse('contacto') + '?MAIL')
+
+        if password != passwordc:
+            return redirect(reverse('contacto') + '?PASS')
+
         if contact_form.is_valid():
             registro = Contact(run=contact_form.cleaned_data['run'],
                                 passport=contact_form.cleaned_data['passport'],
@@ -25,10 +37,7 @@ def contacto(request):
                                 message=contact_form.cleaned_data['message'],
                                 age=contact_form.cleaned_data['age'])
             registro.save()
-            name = request.POST.get('name','')
-            email =request.POST.get('email','')
-            message= request.POST.get('message','')
-
+            
             #crear el correo
             email = EmailMessage(
                 "Welcome_Chile : Nuevo Registro",
