@@ -18,6 +18,7 @@ from django.urls import path
 from django.urls import include
 
 from core import views as core_views
+from contact import views as contact_views
 from turismo import views as turismo_views
 from registration import views as registration_views
 
@@ -30,7 +31,7 @@ urlpatterns = [
     path('tramites',core_views.tramites, name='tramites'),
     path('turismo',turismo_views.turismo, name='turismo'),
     path('preguntas',core_views.preguntas, name='preguntas'),
-    path('contacto',core_views.contacto, name='contacto'),
+    path('contacto',contact_views.contact, name='contacto'),
     path('backoffice',registration_views.backoffice, name='backoffice'),
     path('admin/', admin.site.urls),
 ]

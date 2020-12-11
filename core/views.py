@@ -14,6 +14,3 @@ def tramites(request):
 def preguntas(request):
     return render(request,"core/preguntas.html")
 
-def contacto(request):
-    return render(request,"core/contacto.html")
-

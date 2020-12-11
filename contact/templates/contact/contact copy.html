@@ -16,26 +16,33 @@
             <div class="col md-12">
                 <div class="card card-cto">
                     <div class="card-body">
+                        {% if 'OK' in request.GET %}
+                            <p class="text-primary"><strong>Formulario enviado correctamente</strong></p>
+                        {% endif %}
+                        {% if 'FAIL' in request.GET %}
+                        <p class="text-danger"><strong>Problemas al enviar el formulario, intente nuevamente</strong></p>
+                        {% endif %}
                         <!-- Formulario -->
-                        <form action="#" id="formulario_contacto" name="formulario_contacto" onsubmit="confirmacion()">
-                             <div class="form-group row">
+                        <form action="#" method="POST" id="formulario_contacto" name="formulario_contacto" onsubmit="confirmacion()">
+                            {% csrf_token %}
+                            <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <label for="rut" class="bold text-blue">* Rut:</label>
-                                    <input type="text" id="rut" name="rut" placeholder="Ej. 12345678-9" class="form-control">
+                                    <label for="rut" class="bold text-blue">* Rut:</label><br>
+                                    {{form.rut}}
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="pasaporte" class="bold text-blue">* Pasaporte:</label>
-                                    <input type="pasaporte" id="pasaporte" name="pasaporte" placeholder="Ej. F987654" class="form-control">
+                                    <label for="pasaporte" class="bold text-blue">* Pasaporte:</label><br>
+                                    {{form.pasaporte}}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <label for="nombre" class="bold text-blue">* Nombre:</label>
-                                    <input type="nombre" id="nombre" name="nombre" placeholder="Ej. Ana" class="form-control">
+                                    <label for="nombre" class="bold text-blue">* Nombre:</label><br>
+                                    {{form.nombre}}
                                 </div>
                                 <div class="col-sm-6">
-                                    <label for="apellido" class="bold text-blue">* Apellido:</label>
-                                    <input type="apellido" id="apellido" name="apellido" placeholder="Ej. Liza" class="form-control">
+                                    <label for="apellido" class="bold text-blue">* Apellido:</label><br>
+                                    {{form.apellido}}
                                 </div>
                             </div>
                             <div class="card card-cto">
@@ -44,28 +51,28 @@
                                         <div class="col-sm-6">
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <label for="email" class="bold text-blue">* Email:</label>
-                                                    <input type="email" id="email" name="email" placeholder="Ej. correo@correo.com" class="form-control">
+                                                    <label for="email" class="bold text-blue">* Email:</label><br>
+                                                    {{form.email}}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <label for="confirmar_email" class="bold text-blue">* Confirmar Email:</label>
-                                                    <input type="confirmar_email" id="confirmar_email" name="confirmar_email"class="form-control">
+                                                    <label for="confirmar_email" class="bold text-blue">* Confirmar Email:</label><br>
+                                                    {{form.confirm_email}}
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <label for="password" class="bold text-blue">* Password:</label>
-                                                    <input type="password" id="password" name="password" placeholder="********" class="form-control">
+                                                    <label for="password" class="bold text-blue">* Password:</label><br>
+                                                    {{form.password}}
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <label for="password_confirm" class="bold text-blue">* Confirme Password:</label>
-                                                    <input type="password" id="password_confirm" name="password_confirm" placeholder="********" class="form-control">
+                                                    <label for="password_confirm" class="bold text-blue">* Confirme Password:</label><br>
+                                                    {{form.confirm_password}}
                                                 </div>
                                             </div>
                                         </div>
@@ -77,46 +84,25 @@
                                 <div class="col-md-6">
                                     <div class="form-group row">
                                         <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="fecha_nac" class="bold text-blue">* Fecha de Nacimiento:</label>
-                                                <input type="date" id="fecha_nac" name="fecha_nac" class="form-control">
-                                            </div>
+                                            
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="pais" class="bold text-blue">* Seleccione su Pais:</label>
                                             <br>
-                                            <select name="pais" id="pais" class="form-control">
-                                                <option value="" disabled selected></option>
-                                                <option value="brasil">Brasil</option>
-                                                <option value="colombia">Colombia</option>
-                                                <option value="argentina">Argentina</option>
-                                                <option value="peru">Peru</option>
-                                                <option value="venezuela">Venezuela</option>
-                                                <option value="uruguay">Uruguay</option>
-                                            </select>
+                                            {{form.pais}}
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="genero" class="bold text-blue">Seleccione su género:</label>
                                             <div class="col">
-                                                <input type="radio" id="femenino" name="genero" value="femenino" class="resaltar">
-                                                <label for="femenino" class="bold text-grey btn-link">Femenino</label><br>
-                                                <input type="radio" id="masculino" name="genero" value="masculino" class="resaltar">
-                                                <label for="masculino" class="bold text-grey btn-link">Masculino</label><br>
-                                                <input type="radio" id="otro" name="genero" value="otro" class="resaltar">
-                                                <label for="otro" class="bold text-grey btn-link">Otro</label>
+                                                {{form.genero}}
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="interes" class="bold text-blue">Seleccione sus intereses:</label>
                                             <div class="col">
-                                                <input type="checkbox" id="interes1" name="interes1" value="turismo" class="resaltar">
-                                                <label for="interes1" class="bold text-grey btn-link">Turismo</label><br>
-                                                <input type="checkbox" id="interes2" name="interes2" value="trabajo" class="resaltar">
-                                                <label for="interes2" class="bold text-grey btn-link">Trabajo</label><br>
-                                                <input type="checkbox" id="interes3" name="interes3" value="negocio" class="resaltar">
-                                                <label for="interes3" class="bold text-grey btn-link">Negocios</label><br>
+                                                {{form.interes}}
                                             </div>
                                         </div>
                                     </div>
@@ -125,10 +111,13 @@
                                     <label for="comentarios" class="bold text-blue">* Ingrese un comentario</label>
                                     <label for="cant" id="contador">150</label>
                                     <label for="cant">/ 150</label>
+                                    {{form.comentario}}
                                     <br>
+                                    <!--
                                     <div class="row">
                                         <textarea name="comentarios" id="comentarios" cols="60" rows="6" class="bold" onkeyup="contar(this);" maxlength="151"></textarea>
                                     </div>
+                                    -->
                                 </div>
                             </div>
                             <p class="obligatorio text-center">Los campos con * son obligatorios</p>
@@ -138,11 +127,14 @@
                                 <input type="reset" class="btn btn-limpiar" value="Limpiar">
                             </div>
                         </form>
+                        <form>
+                            {{ form.fecha_nac }}
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
     <!-- Fin Formulario Contacto -->
  {% endblock %}
+

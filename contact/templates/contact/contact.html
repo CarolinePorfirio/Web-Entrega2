@@ -1,0 +1,151 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Contactos{% endblock%}
+
+{% block Carrucel %} {% endblock %}
+
+{% block subtitle %}Contacto{% endblock %}
+
+{% block parrafo %} Regristrate con nosotros para la recepcion de noticias o hacernos llegar tus preguntas. {% endblock %}
+
+ {% block content %} 
+    <!-- Inicio Formulario Contacto -->
+    
+    <main class="container mb-6 mt-6">
+        <div class="row mb-6 mt-6">
+            <div class="col md-12">
+                <div class="card card-cto">
+                    <div class="card-body">
+                        {% if 'OK' in request.GET %}
+                            <p class="text-primary"><strong>Formulario enviado correctamente</strong></p>
+                        {% endif %}
+                        {% if 'FAIL' in request.GET %}
+                        <p class="text-danger"><strong>Problemas al enviar el formulario, intente nuevamente</strong></p>
+                        {% endif %}
+                        <!-- Formulario -->
+                        <form action="#" method="POST" id="formulario_contacto" name="formulario_contacto" onsubmit="confirmacion()">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label for="rut" class="bold text-blue">* Rut:</label><br>
+                                    {{form.rut}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="pasaporte" class="bold text-blue">* Pasaporte:</label><br>
+                                    {{form.pasaporte}}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label for="nombre" class="bold text-blue">* Nombre:</label><br>
+                                    {{form.nombre}}
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="apellido" class="bold text-blue">* Apellido:</label><br>
+                                    {{form.apellido}}
+                                </div>
+                            </div>
+                            <div class="card card-cto">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <label for="email" class="bold text-blue">* Email:</label><br>
+                                                    {{form.email}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <label for="confirmar_email" class="bold text-blue">* Confirmar Email:</label><br>
+                                                    {{form.confirm_email}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <label for="password" class="bold text-blue">* Password:</label><br>
+                                                    {{form.password}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <label for="password_confirm" class="bold text-blue">* Confirme Password:</label><br>
+                                                    {{form.confirm_password}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="fecha_nac" class="bold text-blue">Fecha de Nacimiento:</label>
+                                                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                                    {{ form.fecha_nac }}
+                                                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="pais" class="bold text-blue">* Seleccione su Pais:</label>
+                                            <br>
+                                            {{form.pais}}
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label for="genero" class="bold text-blue">Seleccione su género:</label>
+                                            <div class="col">
+                                                {{form.genero}}
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="interes" class="bold text-blue">Seleccione sus intereses:</label>
+                                            <div class="col">
+                                                {{form.interes}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="comentarios" class="bold text-blue">* Ingrese un comentario</label>
+                                    <label for="cant" id="contador">150</label>
+                                    <label for="cant">/ 150</label>
+                                    {{form.comentario}}
+                                    <br>
+                                    <!--
+                                    <div class="row">
+                                        <textarea name="comentarios" id="comentarios" cols="60" rows="6" class="bold" onkeyup="contar(this);" maxlength="151"></textarea>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <p class="obligatorio text-center">Los campos con * son obligatorios</p>
+                            <p id="confirmar_datos" class="text-center"></p>
+                            <div class="row justify-content-center">
+                                <input type="submit" class="btn btn-enviar" id="confirmar_datos" value="Enviar">
+                                <input type="reset" class="btn btn-limpiar" value="Limpiar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Fin Formulario Contacto -->
+ {% endblock %}
+    <script>
+  $(function () {
+    $("#datetimepicker1").datetimepicker({
+      format: 'DD/MM/YYYY',
+    });
+  });
+</script>
+    
