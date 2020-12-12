@@ -1,0 +1,228 @@
+{% extends 'core/base.html' %}
+{% block title %} Tramites{% endblock%}
+{% block Carrucel %}
+    {% load static %}
+    <!-- INICIO Contenedor CAROUSEL -->
+        <div class="row justify-content-center mt-4 mb-4">
+            <div class="col">
+                <div class="carousel slide" data-ride="carousel" id="carousel">
+                    <!-- Indicadores -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ul>
+                    <!-- SlideShow -->
+                    <div class="carousel-inner">
+                        <a href="#caronacio">
+                        <div cclass="carousel-item" class="carousel-item active" >
+                            <img class="img-fluid" src="{% static 'core/img/bandera-chile-1200x400.jpg' %} "  alt="nacionalización">
+                        </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#caroresi">
+                            <img class="img-fluid" src="{% static 'core/img/intervencion-migrante (1200x400).jpg' %}" alt="permanencia">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#caropermi">
+                            <img class="img-fluid " src="{% static 'core/img/0410-06.png' %}" alt="permiso de trabajo">
+                        </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Controladores -->
+                    <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <!-- FIN Contenedor CAROUSEL -->
+{% endblock%}    
+
+{% block subtitle %} Información de trámites{% endblock %}
+
+{% block parrafo %} Muchos son los tramites a realizar para poder visitar o tramitar tu residencia
+aca encontraras los primcipales y donde tienes que realizarlos {% endblock %}
+
+ {% block content %}
+     {% load static %}
+    <div class="container">
+        <hr>
+        <div  class="row mt-4 mb-4  justify-content-center text-center">
+            <div class="card-deck mt-5">
+                <div class="card bg-light text-primary justify-content-center">
+                    <div class="row justify-content-center mt-2">
+                        <img class="card-img-top "  src="{% static 'core/img/300 guantes.png' %}" alt="imagen" id="caropermi" style="width: 120px;">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-blue bold">Permiso de trabajo como Turista</h4>
+                        <br>
+                        <p class="text-card2">La autorización para trabajar  con permiso de turismo, se podrá otorgar a quienes tengan la condición de turista vigente y requieran desarrollar actividades remuneradas dentro del pais. Para conocer sobre los requisitos de este trámite, ingrese a " ver mas detalles".
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="#requituri">Ver requisitos</a>
+                    </div>
+                </div>
+                <div class="card bg-light text-primary">
+                    <div class="row justify-content-center mt-2">
+                        <img class="card-img-top" src="{% static 'core/img/ic1.png' %}" alt="Imagen" id="caroresi" style="width: 120px;">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-blue bold">Residencia Definitiva</h4>
+                        <br>
+                        <br>
+                        <p class="text-card2">Es el permiso otorgado a los extranjeros que tengan vigente una Visa de residente, para asi residir indefinidamente y desarollar cualquier actividad licita dentro del pais. Para conocer sobre los requisitos de este trámite, ingrese a " ver mas detalles". </p>
+                   
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="#requidefi">Ver requisitos</a>
+                    </div>
+                </div>
+                <div class="card bg-light text-primary">
+                    <div class="row justify-content-center mt-2">
+                        <img class="card-img-top" src="{% static 'core/img/home-page.jpg' %}" alt="Imagen" id="caronacio" style="width: 120px;">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-blue bold"> Carta de Nacionalización</h4>
+                        <br>
+                        <br>
+
+                        <p class="text-card2">La carta de Nacionalización es un modo de adquirir la nacionalidad chilena en virtud de lo establecido en el Art. 10 N° 3 de la constitución política de la Republica, la que se materializa en un Decreto Exento firmado por el Ministro del interior por orden del Presidente de la República. Para conocer sobre los requisitos de este trámite, ingrese a " ver mas detalles".</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary" href="#requinacio">Ver requisitos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de contenidos usando CARDS-->
+    <br>
+    <!-- Inicio de contenido usando botones - filas y columnas -->
+    <div class="container">
+        <hr>
+        <h3 class="display-4 text-blue text-tit "> Encuentra acá las direciones de sitios de interes</h3>
+        <hr><br>
+        <button type="button" class="btn btn-secondary" onclick="document.getElementById('parrafo').style.display = 'block'">Mostrar Direcciones</button>
+        <button type="button" class="btn btn-info" onclick="document.getElementById('parrafo').style.display = 'none'">Ocultar información</button>
+        <div class="row mt-4" id="parrafo">            
+            <div class="table-responsive">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th style="color: #19376c;">SITIO</th>
+                            <th style="color:#19376c ;">DIRECCIÓN</th>
+                            <th style="color:#19376c">CIUDAD</th>
+                            <th style="color: #19376c;">HORARIO DE ATENCIÓN</th>
+                            <th style="color: #19376c;">TRÁMITES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: #9b9b9b ">PDI</td>
+                            <td style="color: #9b9b9b;">San Francisco 253</td>
+                            <td style="color: #9b9b9b;">Santiago</td>
+                            <td style="color: #9b9b9b;">8:00 - 14:00 Hrs.</td>
+                            <td style="color: #9b9b9b;">Certificado de viajes</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #9b9b9b ">Extranjeria</td>
+                            <td style="color: #9b9b9b;">Matucana 1223</td>
+                            <td style="color: #9b9b9b;">Santiago</td>
+                            <td style="color: #9b9b9b;">8:00 - 14:00 Hrs.</td>
+                            <td style="color: #9b9b9b;">Apostillado de Visas</td>
+                            
+                        </tr>
+                        <tr>
+
+                            <td style="color: #9b9b9b ">Registro Civíl</td>
+                            <td style="color: #9b9b9b;">Huerfanos 1570</td>
+                            <td style="color: #9b9b9b;">Santiago</td>
+                            <td style="color: #9b9b9b;">8:00 - 14:00 Hrs.</td>
+                            <td style="color: #9b9b9b;">Certificado de Antecedentes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><hr>
+    <div class="container">
+        <h3 class="display-4 text-tit text-blue"> Requisitos</h3>
+    </div>
+    <!-- Fin de contenido usando botones - filas y columnas -->
+    <hr>
+    <section id="requisitossection"> 
+    <!--agregr este nombre al boton que  quiero que llame-->
+        <main class="container">
+            <div class="row">
+                <div class="col ">
+                    <div class="card ">
+                        <div class="card-header text-blue text-tit">
+                            <h2 id="requituri" style="text-align: center;"> Requisitos para la Visa de Turista </h2>
+                        </div>
+                        <div class="card-body text-card  ">
+                                <ul>
+                                    <li style="list-style-type: square; ">Copia de Pasaporte</li>
+                                    <li style="list-style-type: square; ">Copia de visación o Tarjeta de Turismo Vigente</li>
+                                    <li style="list-style-type: square; ">Contrato de trabajo firmado ante notario</li>     
+                                    <li style="list-style-type: square; ">Certificado de Antecedentes pais de origen legalizado y a postillado.</li>  
+                                </ul>  
+                            <br><br><br><br>
+                            <p style="text-align: justify;"> En la primera parte usted deberá completar sus datos personales y adjuntar documentación que corresponde al trámite "Permiso de Trabajo en condición de Turista". Posterior a este paso se analizará su solicitud. Si usted cumple con todos los requisitos de manera correcta, se le enviará un mail con la orden de pago. </p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header text-blue text-tit">
+                            <h2 id="requidefi" style="text-align: center;" > Requisitos para la Visa Definitiva</h2>
+                        </div>
+                        <div class="card-body text-card">
+                            <ul >
+                                <li style="list-style-type: square; ">Certificado Antecendentes pais de origen *(Mayores de 18 años).</li>
+                                <li style="list-style-type: square; ">Certificado Antecendentes Registro Civíl *(Mayores de 18 años).</li>
+                                <li style="list-style-type: square; ">Copia de Cédula de identidad *(Mayores de 18 años).</li>  
+                                <li style="list-style-type: square; ">Copia de Pasaporte y Visaciones anteriores.</li> 
+                                <li style="list-style-type: square; ">Copia de Cédula de identidad *(Mayores de 18 años).</li>      
+                            </ul>
+                            <br>
+                            <p style="text-align: justify; ">Las solicitudes de Permanencia Definitiva se realizan en el portal tramites.extranjeria.gob.cl, con ClaveÚnica. Los nacionales de Brasil, China, Cuba, Haití y Perú deberán hacer el trámite en ChileAtiende, con los mismos requisitos de los demás países. </p>  
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header text-blue text-tit">
+                            <h2 id="requinacio" style="text-align: center;"> Requisitos para la Nacionalización</h2>
+                        </div>
+                        <div class="card-body text-card">
+                            <ul >
+                                <li style="list-style-type: square; text-align: left; color: #9b9b9b;">Copia de Pasaporte y Visaciones anteriores.</li>
+                                <li style="list-style-type: square; text-align: left; color: #9b9b9b;">Certificado de Antecedentes pais de origen legalizado y a postillado.</li>
+                                <li style="list-style-type: square; text-align: left; color:#9b9b9b">Certificado Antecendentes Registro Civíl *(Mayores de 18 años)</li>
+                                <li style="list-style-type: square; text-align: left; color: #9b9b9b;">Certificado de viajes emitido por la PDI.</li>
+                            </ul>        
+                            <br><br><br>
+                            <p style="text-align: justify;"> A contar del 08/01/2016 podrá otorgarse Carta de Nacionalización a quienes hayan cumplidos 18 años de edad que tengan cinco o más años de residencia en Chile (a contar desde el estampado de la visa que dio origen a la Permanencia Definitiva que mantiene vigente), y que sean titulares de Permanencia Definitiva.</p>  
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+ 
+ {% endblock %}
+
+
+
+
