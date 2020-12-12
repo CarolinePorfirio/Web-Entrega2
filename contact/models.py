@@ -11,7 +11,7 @@ class Contact(models.Model):
     confirm_passwrd= models.CharField(max_length = 100, verbose_name = "CONFIRMA_CLAVE")
     country = models.CharField(max_length = 100, verbose_name = "PAIS")
     gender = models.CharField(max_length = 100, verbose_name = "GENERO")
-    interest = models.CharField(max_length = 100, verbose_name = "INTERES")
+    interest = models.CharField(max_length = 1000, verbose_name = "INTERES")
     age =models.CharField(max_length = 100, verbose_name = "EDAD")
     message =  models.TextField(verbose_name = "DESCRIPCION")
     created = models.DateTimeField(auto_now_add = True, verbose_name= "Fecha Creacion")
